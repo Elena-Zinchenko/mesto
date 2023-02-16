@@ -4,33 +4,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Mecto</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body>
   <div class="page">
-    <!--header-->
     <header class="header page__header">
       <div class="header__logo"></div>
     </header>
+
     <main class="content">
       <section class="profile content__profile">
         <img src="./images/avatar.jpg" alt="Аватар пользователя" class="profile__avatar">
         <div class="profile__info">
-          <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__edit-button">
-            <img src="./images/pencil.png" alt="Кнопка изменения профиля">
-          </button>
+          <div class="profile__item">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <button type="button" class="profile__edit-button">
+              <img src="./images/pencil.svg" alt="Кнопка изменения профиля">
+            </button>
+          </div>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
         <button type="button" class="profile__add-button">
-          <img src="./images/plus.png" alt="Кнопка добавить запись">
+          <img src="./images/plus.svg" alt="Кнопка добавить запись">
         </button>
       </section>
 
+      <section class="elements content__elements">
+        <div class="element elements__element">
+          <img src="./images/Karachayevsk.jpg" alt="фотография Карачаевск" class="element__image">
+          <div class="element__container">
+            <h2 class="element__title">Карачаевск</h2>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element elements__element">
+          <img src="./images/Elbrus.jpg" alt="гора Эльбрус" class="element__image">
+          <div class="element__container">
+            <h2 class="element__title">гора Эльбрус</h2>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element elements__element">
+          <img src="./images/Dombay.jpg" alt="фотография Домбай" class="element__image">
+          <div class="element__container">
+            <h2 class="element__title">Домбай</h2>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element elements__element">
+          <img src="./images/Elbrus.jpg" alt="гора Эльбрус" class="element__image">
+          <div class="element__container">
+            <h2 class="element__title">гора Эльбрус</h2>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element elements__element">
+          <img src="./images/Dombay.jpg" alt="фотография Домбай" class="element__image">
+          <div class="element__container">
+            <h2 class="element__title">Домбай</h2>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+        <div class="element elements__element">
+          <img src="./images/Karachayevsk.jpg" alt="фотография Карачаево-Черкессия" class="element__image">
+          <div class="element__container">
+            <h2 class="element__title">Карачаево-Черкессия</h2>
+            <button type="button" class="element__like-button"></button>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <footer class="footer page__footer">
+      <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
+    </footer>
   </div>
 </body>
 
