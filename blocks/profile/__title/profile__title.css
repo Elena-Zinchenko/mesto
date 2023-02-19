@@ -4,16 +4,10 @@
   font-weight: 500;
   line-height: 48px;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-@media screen and (max-width: 740px) {
-  .profile__title {
-    margin-bottom: 14px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -21,5 +15,7 @@
     max-width: 189px;
     font-size: 27px;
     line-height: 32.68px;
+    text-align: center;
+    margin-left: 28px;
   }
 }

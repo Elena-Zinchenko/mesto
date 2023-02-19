@@ -20,4 +20,4 @@
 * Возможность добавлять/удалять фотографии
 * Ставить/убирать лайки
 
-* [Ссылка на проект](https://elena-zinchenko.github.io/russian-travel/index.html)
+[Ссылка на проект](https://elena-zinchenko.github.io/mesto/index.html)
