@@ -48,11 +48,9 @@ const initialCards = [
   }
 ];
 
-// функция «открытия/закрытия» попапа
+// функция «открытия» попапа
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  nameInput.value = profileName.textContent;
-  jobInput.value = profileJob.textContent;
 };
 
 // функция закрытия» попапа
@@ -60,7 +58,12 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 };
 
-buttonEditProfile.addEventListener('click', () => { openPopup(popupEditProfile); });
+buttonEditProfile.addEventListener('click', () => {
+  openPopup(popupEditProfile);
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
+});
+
 buttonCloseProfile.addEventListener('click', () => { closePopup(popupEditProfile); });
 
 //Создание карточки
@@ -84,12 +87,9 @@ const createCard = (item) => {
     evt.target.closest('.element').remove();
   });
 
-  //Открытие/закрытие попапа-изображие
-
-
+  //Открытие попапа-изображие
   cardElementImage.addEventListener('click', function (evt) {
     openPopup(popupOpenImage);
-    console.log('открытие');
     bigImage.src = evt.target.src;
     bigImage.alt = evt.target.alt;
     titleImage.textContent = evt.target.alt;
@@ -108,12 +108,9 @@ initialCards.forEach((item) => {
 
 buttonCloseImage.addEventListener('click', () => { closePopup(popupOpenImage); });
 
-// Обработчик «отправки» формы
-function handleFormSubmit(evt) {
+// Обработчик «отправки» формы редактирования профиля
+function submitEditProfileForm(evt) {
   evt.preventDefault();
-
-  nameInput.value;
-  jobInput.value;
 
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
@@ -121,18 +118,20 @@ function handleFormSubmit(evt) {
   closePopup(popupEditProfile);
 };
 
-formElementEditProfile.addEventListener('submit', handleFormSubmit);
+formElementEditProfile.addEventListener('submit', submitEditProfileForm);
 
-buttonAddCard.addEventListener('click', () => { openPopup(popupAddCard); });
+buttonAddCard.addEventListener('click', () => {
+  openPopup(popupAddCard);
+  formElementAddCard.reset();
+});
 buttonCloseAddCard.addEventListener('click', () => { closePopup(popupAddCard); });
 
-// Обработчик «отправки» формы
+// Обработчик «отправки» формы создания карты
 function handleFormCardSubmit(evt) {
   evt.preventDefault();
 
   addCard({ name: placeName.value, link: linkPicture.value });
-  placeName.value = "";
-  linkPicture.value = "";
+  evt.target.reset();
 
   closePopup(popupAddCard);
 };
