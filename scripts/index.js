@@ -20,6 +20,8 @@ const popupOpenImage = document.querySelector('.popup_type_open-image');
 const bigImage = popupOpenImage.querySelector('.popup__open-image');
 const titleImage = popupOpenImage.querySelector('.popup__image-title');
 const buttonCloseImage = popupOpenImage.querySelector('.popup__close');
+const buttonsClosePopup = document.querySelectorAll('.popup__close');
+const popup = document.querySelectorAll('.popup');
 
 const initialCards = [
   {
@@ -48,12 +50,26 @@ const initialCards = [
   }
 ];
 
-// функция «открытия» попапа
+// Закрытия попапа кликом на оверлей
+popup.forEach(item => {
+  item.addEventListener('click', (evt) => {
+    if (evt.target === evt.currentTarget) {
+      closePopup(item);
+    }
+  });
+});
+
+//функция открытия попапа
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape') {
+      popup.classList.remove('popup_opened');
+    }
+  });
 };
 
-// функция закрытия» попапа
+// функция закрытия попапа
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
 };

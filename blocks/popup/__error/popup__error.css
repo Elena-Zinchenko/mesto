@@ -1,0 +1,8 @@
+.popup__error {
+  display: block;
+  max-width: 358px;
+  min-height: 12px;
+  margin-top: 5px;
+  visibility: hidden;
+  line-height: 12px;
+}
