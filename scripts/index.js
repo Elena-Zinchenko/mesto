@@ -20,7 +20,6 @@ const popupOpenImage = document.querySelector('.popup_type_open-image');
 const bigImage = popupOpenImage.querySelector('.popup__open-image');
 const titleImage = popupOpenImage.querySelector('.popup__image-title');
 const buttonCloseImage = popupOpenImage.querySelector('.popup__close');
-const buttonsClosePopup = document.querySelectorAll('.popup__close');
 const popup = document.querySelectorAll('.popup');
 
 const initialCards = [
