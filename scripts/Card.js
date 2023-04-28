@@ -26,7 +26,7 @@ export class Card {
   }
 
   generateCard() {
-    this._element = this._templateSelector.content.cloneNode(true)
+    this._element = this._templateSelector.cloneNode(true)
     this._cardTitle = this._element.querySelector('.element__title');
     this._cardImage = this._element.querySelector('.element__image');
     this._cardTitle.textContent = this._title;
